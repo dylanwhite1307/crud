@@ -1,0 +1,246 @@
+/**** NULL STYLES ****/
+
+@import "nullstyle.scss";
+
+
+/**** FONTS ****/
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap");
+
+/**** BODY STYLE ****/
+
+body {
+  background: linear-gradient(45deg, #1d2b64, #f8cdda) fixed;
+  color: rgb(255, 255, 255);
+  background-size: 200% 200%;
+  font-size: 24px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/**** TABLE STYLE ****/
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 150px 0 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-shadow: 0px 0px 20px rgb(236, 193, 224);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+
+  }
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .th,
+  .td {
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid rgba(250, 250, 250, 0.8);
+    cursor: default;
+    max-width: 250%;
+    font-size: 25px;
+    // width: 65px;
+  }
+
+  .thead,
+  .tbody,
+  .table-add-form {
+    position: relative;
+    display: flex;
+    box-shadow: 0px 0px 20px rgb(236, 193, 224);
+  }
+
+  .thead {
+    .th {
+      background: rgba($color: #34283b, $alpha: 0.5);
+      text-transform: uppercase;
+    }
+  }
+
+  .tbody,
+  .table-add-form {
+    .td {
+      text-transform: lowercase;
+      background: rgba($color: #34283b, $alpha: 0.2);
+
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px 3px rgb(236, 193, 224);
+      background: rgba($color: #34283b, $alpha: 0.2);
+    }
+  }
+
+}
+
+
+/**** BUTTON DELETE ****/
+
+.tbody-btn-delete, .tbody-btn-edit, .tbody-btn-up {
+  position: absolute;
+  top: 12.5px;
+  right: -140px;
+  border-top: 0px solid rgba(250, 250, 250, 0.5);
+  padding: 10px 14px;
+  border-radius: 9em;
+  box-shadow: 0px 0px 10px rgb(236, 193, 224);
+  transition: all 0.15s ease;
+  color: #ffffff;
+  background: rgba($color: #34283b, $alpha: 0.1);
+  opacity: .3;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 3px rgb(236, 193, 224);
+    background: rgba($color: #34283b, $alpha: .3);
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+}
+
+.tbody-btn-edit, .tbody-btn-up{
+  right: -70px;
+  padding: 10px 11.5px;
+  transform: rotate(110deg);
+  &:active {
+    transform: scale(0.95) rotate(110deg);
+  }
+}
+
+.tbody-btn-up{
+  display: none;
+  transform: rotate(0deg);
+  box-shadow: 0px 0px 10px 3px rgb(236, 193, 224);
+  background: rgba($color: #34283b, $alpha: .3);
+  opacity: 1;
+  &:hover {
+    box-shadow: 0px 0px 10px 4px rgb(236, 193, 224);
+    background: rgba($color: #34283b, $alpha: .5);
+  }
+  &:active {
+    transform: scale(0.95) rotate(0deg);
+  }
+}
+/**** BUTTON ADD ****/
+
+.table-btn__add {
+  display: inline-block;
+  margin: 20px 0 0 0;
+  background: rgba($color: #34283b, $alpha: .1);
+  color: #ffffff;
+  padding: 16px 25px;
+  border-radius: 9em;
+  font-size: 33px;
+  transition: all 0.15s ease;
+  box-shadow: 0px 0px 10px rgb(236, 193, 224);
+  opacity: .3;
+
+  &:hover {
+    background: rgba($color: #34283b, $alpha: .3);
+    box-shadow: 0px 0px 10px 3px rgb(236, 193, 224);
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+
+
+
+/**** TABLE FORM ****/
+.table {
+  .table-add-form, .edit {
+      background: rgba($color: #34283b, $alpha: .3);
+      &:hover{
+        background: rgba($color: #34283b, $alpha: .3);
+      }
+    }
+
+      .table-add-form__word:hover,
+      .table-add-form__transcription:hover,
+      .table-add-form__translation:hover,
+      .editInput1:hover,
+      .editInput2:hover,
+      .editInput3:hover {
+      box-shadow: 0px 0px 10px 1px rgba(236, 193, 224, .5);
+      background: rgba($color: #34283b, $alpha: .2);
+      cursor: pointer;
+    }
+
+    .table-add-form__word:focus,
+    .table-add-form__transcription:focus,
+    .table-add-form__translation:focus,
+    .editInput1:focus,
+    .editInput2:focus,
+    .editInput3:focus {
+      box-shadow: 0px 0px 10px 2px rgb(236, 193, 224);
+      background: rgba($color: #34283b, $alpha: .3);
+      cursor: text;
+    }
+
+    .table-add-form__num {
+      cursor: text;
+    }
+
+    .table-add-form__confirm {
+      position: absolute;
+      top: 12.5px;
+      right: -70px;
+      border-top: 0px solid rgba(250, 250, 250, 0.5);
+      padding: 10px 14px;
+      border-radius: 9em;
+      box-shadow: 0px 0px 10px rgb(236, 193, 224);
+      transition: all 0.15s ease;
+      color: #ffffff;
+      background: rgba($color: #34283b, $alpha: 0.1);
+      opacity: .3;
+
+      &:hover {
+        box-shadow: 0px 0px 10px 3px rgb(236, 193, 224);
+        background: rgba($color: #34283b, $alpha: .3);
+        opacity: 1;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+  
+}
+
+
+
+
+
+/**** MEDIA STYLE ****/

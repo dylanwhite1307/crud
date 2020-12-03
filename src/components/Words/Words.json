@@ -1,0 +1,60 @@
+
+[
+  {
+    "data": {
+    "word": "transition",
+    "transcription": "[tranˈziSH(ə)n]",
+    "translation": "переход"
+  }
+},
+  {
+    "data": {
+    "word": "font",
+    "transcription": "[fänt]",
+    "translation": "шрифт"
+  }
+},
+  {
+    "data": {
+    "word": "array",
+    "transcription": "[əˈrā]",
+    "translation": "массив"
+  }
+},
+  {
+    "data": {
+    "word": "fetch",
+    "transcription": "[feCH]",
+    "translation": "получать"
+  }
+},
+  
+  {
+    "data": {
+    "word": "border",
+    "transcription": "[ˈbôrdər]",
+    "translation": "граница"
+  }
+},
+ { 
+   "data": {
+    "word": "shadow",
+    "transcription": "[ˈSHadō]",
+    "translation": "тень"
+  }
+},
+  {
+    "data": {
+    "word": "return",
+    "transcription": "[rəˈtərn]",
+    "translation": "возвращение"
+  }
+},
+  {
+    "data": {
+    "word": "coronavirus",
+    "transcription": "[kəˈrōnəˌvīrəs]",
+    "translation": "коронавирус"
+  }
+}
+]
